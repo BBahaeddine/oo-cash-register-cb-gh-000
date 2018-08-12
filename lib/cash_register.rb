@@ -16,7 +16,7 @@ class CashRegister
     @total += price * qte
   end
   
-  def self.apply_discount
+  def apply_discount
     if @@discount == 0 
       return "There is no discount to apply."
     else
