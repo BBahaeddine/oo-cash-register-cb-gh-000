@@ -11,9 +11,8 @@ class CashRegister
   def discount
     @@discount
   end
-  # def self.cash_register_with_discount(discount)
-  #   cashRegister = self.new
-  #   @@discount = discount
-  #   cashRegister
-  # end
+  
+  def add_item(title, price)
+    total += 1
+  end
 end
