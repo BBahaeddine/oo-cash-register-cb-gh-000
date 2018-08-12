@@ -1,6 +1,7 @@
 class CashRegister
   attr_accessor :total
   attr_accessor :items
+  attr_accessor :last_transaction
   @@discount
   # @@items = []
   # attr_accessor :discount
@@ -9,6 +10,7 @@ class CashRegister
     @@discount = discount
     @total = 0
     @items = []
+    @last_transaction = 0
   end
   
   def discount
@@ -17,7 +19,8 @@ class CashRegister
   
   def add_item(title, price, qte = 1)
     count = 0
-    @total += price * qte
+    @last_transaction = price * qte
+    @total += @last_transaction
     loop do
       @items << title
       count += 1 
@@ -37,5 +40,6 @@ class CashRegister
   end
   
   def void_last_transaction
+    @total -= @last_transaction
   end
 end
