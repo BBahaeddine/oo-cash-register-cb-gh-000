@@ -8,6 +8,9 @@ class CashRegister
     @total = 0
   end
   
+  def self.discount
+    @@discount
+  end
   # def self.cash_register_with_discount(discount)
   #   cashRegister = self.new
   #   @@discount = discount
