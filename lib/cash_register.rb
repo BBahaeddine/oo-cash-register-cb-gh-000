@@ -16,7 +16,7 @@ class CashRegister
     @total += price * qte
   end
   
-  def apply_discount(@@discount)
+  def apply_discount()
     if @@discount != 0 
       # return "There is no discount to apply."
       total = @total - ((@total * @@discount) / 100)
