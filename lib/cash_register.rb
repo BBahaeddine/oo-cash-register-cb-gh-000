@@ -9,9 +9,9 @@ class CashRegister
     @total = 0
   end
   
-  def items=(array=[])
-    @items = array
-  end
+  # def items=(array=[])
+  #   @items = array
+  # end
   
   def discount
     @@discount
