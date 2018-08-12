@@ -1,12 +1,16 @@
 class CashRegister
   attr_accessor :total
   @@discount
-  @@items = []
+  attr_reader :items
   # attr_accessor :discount
   
   def initialize(discount=0)
     @@discount = discount
     @total = 0
+  end
+  
+  def items=(array=[])
+    @items = array
   end
   
   def discount
@@ -17,7 +21,7 @@ class CashRegister
     count = 0
     @total += price * qte
     loop do
-      @@items << title
+      @items << title
       count += 1 
       if count == qte
         break
