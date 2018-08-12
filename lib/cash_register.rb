@@ -1,12 +1,14 @@
 class CashRegister
   attr_accessor :total
+  attr_accessor :items
   @@discount
-  @@items = []
+  # @@items = []
   # attr_accessor :discount
   
   def initialize(discount=0)
     @@discount = discount
     @total = 0
+    @items = []
   end
   
   def discount
@@ -17,7 +19,7 @@ class CashRegister
     count = 0
     @total += price * qte
     loop do
-      @@items << title
+      @items << title
       count += 1 
       if count == qte
         break
@@ -34,7 +36,7 @@ class CashRegister
     end
   end
   
-  def items
-    return @@items
-  end
+  # def items
+  #   return @@items
+  # end
 end
