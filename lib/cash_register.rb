@@ -13,9 +13,16 @@ class CashRegister
     @@discount
   end
   
-  def add_item(title, price, qte=1)
+  def add_item(title, price, qte = 1)
+    count = 0
     @total += price * qte
-    @@items << title
+    loop do
+      @@items << title
+      count += 1 
+      if count == qte
+        break
+      end
+    end
   end
   
   def apply_discount
