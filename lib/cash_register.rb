@@ -4,11 +4,11 @@ class CashRegister
   
   def initialize(discount)
     @total = 0
-    @discount = discount
+    # @discount = discount
   end
   
-  # def self.discount(discount)
-  #   cashRegister = self.new
-  #   @discount = discount
-  # end
+  def self.discount(discount)
+    cashRegister = self.new
+    @discount = discount
+  end
 end
